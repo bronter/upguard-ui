@@ -1,0 +1,17 @@
+{% import NodesDropdownStyles from "../../../styles/components/nodes-dropdown.scss" %}
+
+<div class="dropdown">
+  <div class="item">
+    Diff ({{ nodes.length }} Nodes)
+    <div class="diff-loader-body {{ isDiffing ? '' : 'hidden'}}">
+      <div class="red"></div>
+      <div class="blue"></div>
+      <div class="green"></div>
+    </div>
+  </div>
+  <div class="content">
+    {% for node of nodes.peek() %}
+      <div class="node-item">{{ node.name }}</div>
+    {% endfor %}
+  </div>
+</div>

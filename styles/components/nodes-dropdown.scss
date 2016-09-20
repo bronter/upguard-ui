@@ -1,0 +1,66 @@
+@mixin teardrop($color) {
+  background-image: radial-gradient(ellipse farthest-side at 95% 50%, $color 10%, rgba(0, 0, 0, 0) 90%);
+}
+
+@keyframes slide {
+  100% {
+    transform: translateX(300%);
+  }
+}
+
+@keyframes hoverdown {
+  50% {
+    transform: translateY(150%);
+  }
+  0%, 100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes hoverup {
+  50% {
+    transform: translateY(-150%);
+  }
+  0%, 100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes fadeout {
+  100% {
+    opacity: 0;
+  }
+}
+
+.diff-loader-body {
+  width: 32px;
+  height: 32px;
+
+  animation: slide 1s ease infinite;
+
+  .red, .green, .blue {
+    height: 6px;
+    width: 24px;
+    border-radius: 50%;
+    position: absolute;
+    left: 0px;
+    top: 12px;
+  }
+
+  .red {
+    @include teardrop(red);
+    animation: hoverup 1s ease infinite;
+  }
+  .blue {
+    @include teardrop(blue);
+    animation: hoverdown 1s ease infinite;
+  }
+  .green {
+    @include teardrop(green);
+  }
+}
+
+.node-item {
+  display: flex;
+  justify-content: center;
+}

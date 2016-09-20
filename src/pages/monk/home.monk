@@ -1,0 +1,19 @@
+{% import HomeStyles from "../../../styles/pages/home.scss" %}
+{% import KeysDropdown from "../../components/js/keys-dropdown.js" %}
+{% import DiffsView from "../../components/js/diffs-view.js" %}
+{% import NodesDropdown from "../../components/js/nodes-dropdown.js" %}
+
+<div class="home">
+  <div class="sidebar-and-content">
+    <div class="sidebar">
+      {% if hasSession %}
+        <NodesDropdown />
+      {% else %}
+        <KeysDropdown />
+      {% endif %}
+    </div>
+    <div class="content">
+      <DiffsView />
+    </div>
+  </div>
+</div>

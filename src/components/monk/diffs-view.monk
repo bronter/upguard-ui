@@ -1,0 +1,6 @@
+{% import DiffsViewStyle from "../../../styles/components/diffs-view.scss" %}
+{% import D3View from "../js/d3-view.js" %}
+
+<div class="view-container">
+  <D3View data={{ diff }} />
+</div>

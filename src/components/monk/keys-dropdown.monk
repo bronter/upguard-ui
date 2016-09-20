@@ -1,0 +1,20 @@
+{% import KeysDropdownStyles from "../../../styles/components/keys-dropdown.scss" %}
+
+<div class="dropdown keys-dropdown" >
+  <div :onclick={{ this.handleClick }} class="item">
+    API Keys
+  </div>
+  <div class="content">
+    <input
+      :onchange={{ this.handleChangeForServiceAPIKey }}
+      type="password"
+      placeholder="Service API Key"
+    />
+    <input
+      :onchange={{ this.handleChangeForSecretKey }}
+      type="password"
+      placeholder="Secret Key"
+    />
+    <input :onclick={{ this.onSubmit }} value="Submit" type="button" />
+  </div>
+</div>

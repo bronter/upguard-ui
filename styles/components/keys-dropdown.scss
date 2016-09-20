@@ -1,0 +1,13 @@
+@import "./dropdown";
+
+.keys-dropdown {
+  input {
+    display: block;
+    width: 90%;
+    height: 14px;
+    margin: 3px 4px;
+    &[type="button"] {
+      height: 24px;
+    }
+  }
+}

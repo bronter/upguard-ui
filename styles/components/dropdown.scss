@@ -1,0 +1,19 @@
+.dropdown {
+  background-color: #333333;
+  .item {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding-left: 5px;
+    font-weight: bold;
+    color: #aaaaaa;
+    background-color: #222222;
+  }
+
+  .content {
+    box-sizing: border-box;
+    padding: 3px 0px;
+  }
+}

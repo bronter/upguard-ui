@@ -1,0 +1,5 @@
+{% import D3ViewStyles from "../../../styles/components/d3-view.scss" %}
+
+<div>
+  <div id="view"></div>
+</div>
