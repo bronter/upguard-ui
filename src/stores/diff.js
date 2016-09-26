@@ -19,16 +19,6 @@ function objDiff(sizeAccum, name, ids, data) {
     }),
   };
 
-  // // Now construct an object of the diff for this level
-  // return allKeys.reduce((prev, curr) => {
-  //   // We need an object with node ids as keys and data values as values
-  //   prev[curr] = diff(ids.reduce((prev2, curr2) => {
-  //     prev2[curr2] = data[curr2][curr];
-  //     return prev2;
-  //   }, {}));
-  //
-  //   return prev;
-  // }, {});
 }
 
 function arrayDiff(sizeAccum, name, ids, data) {
@@ -47,16 +37,9 @@ function arrayDiff(sizeAccum, name, ids, data) {
       }, {}));
     }),
   };
-  // return Array(maxLength).fill().map((_, i) => {
-  //   return diff(ids.reduce((prev, curr) => {
-  //     prev[curr] = data[curr][i];
-  //     return prev;
-  //   }, {}));
-  // });
 }
 
 function diff(sizeAccum, name, data) {
-  // debugger;
   // Grab the ids of the nodes we'll be diffing
   const ids = Object.keys(data);
 
