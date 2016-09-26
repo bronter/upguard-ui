@@ -136,12 +136,12 @@ function diff(sizeAccum, name, data) {
       // and assign it to this ret object we've been building that already
       // contains our array and object groups.
       const invert2 = invert(inverts)
-      ret.children.push(Object.keys(invert2).map((k) => {
+      ret.children = Object.keys(invert2).map((k) => {
         return {
           name: k,
-          children: {name: invert2[k], size: sizeAccum},
+          children: [{name: invert2[k], children: [], size: sizeAccum}],
         }
-      }));
+      });
     }
 
     return ret;
